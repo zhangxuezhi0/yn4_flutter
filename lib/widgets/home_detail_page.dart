@@ -54,6 +54,7 @@ class _MailDetailPageState extends State<MailDetailPage>
 
   void thisPageloaded() async {
     try {
+      print("===========detail loaded");
       await dio.post(Config.BASE_URL + Config.USER_DATA, data: {
         "jobId": mainItem.id,
         "turnOnDet": "1",
@@ -68,6 +69,7 @@ class _MailDetailPageState extends State<MailDetailPage>
 
   void downloadAct() async {
     try {
+      print("===========downloaded.");
       Dio dio = Dio();
       await dio.post(Config.BASE_URL + Config.USER_DATA, data: {
         "jobId": mainItem.id,

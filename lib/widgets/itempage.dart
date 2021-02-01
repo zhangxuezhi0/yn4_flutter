@@ -19,7 +19,7 @@ class _ItemPageState extends State<ItemPage>
 
   Future<List<MainItem>> _fetchJobList() async {
     final response = await http.get('${Config.BASE_URL + Config.PLATFORM_AD}');
-
+    print("===========list loaded.");
     List<MainItem> jobList = List<MainItem>();
 
     if (response.statusCode == 200) {

@@ -131,6 +131,7 @@ class _MainPageState extends State<MainPage> {
             await sleep(const Duration(milliseconds: 108));
           }
         }
+        print("===========device id loaded.");
         await dio.post(Config.BASE_URL + Config.USER_DATA, data: {
           "deInfoId": MyConst.DEVICE_INFO_ID,
           "login": "1",

@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:UangDana/main.dart';
 import 'package:UangDana/model/my_const.dart';
+import 'package:flutter/material.dart';
 
 class How2UsePage extends StatefulWidget {
   @override

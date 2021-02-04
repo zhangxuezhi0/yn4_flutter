@@ -89,7 +89,7 @@ class JobItem extends StatelessWidget {
                 )
               ],
             ),
-            new Container(
+            /*new Container(
               decoration: new BoxDecoration(
                   color: new Color(0xFFF6F6F8),
                   borderRadius: new BorderRadius.all(new Radius.circular(6.0))),
@@ -124,7 +124,7 @@ class JobItem extends StatelessWidget {
                 mainitem.description3,
                 style: new TextStyle(color: new Color(0xFF9fa3b0)),
               ),
-            ),
+            ),*/
           ],
         ),
       ),
@@ -136,7 +136,7 @@ class JobItem extends StatelessWidget {
   String maxAmt() {
     if (mainitem != null) {
       amts = mainitem.amounts.split(",");
-      return "Rp " + amts[amts.length - 1];
+      return "NGN " + amts[amts.length - 1];
     }
     return "";
   }

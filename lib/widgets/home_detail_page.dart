@@ -1,5 +1,3 @@
-import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:UangDana/config.dart';
 import 'package:UangDana/model/item.dart';
 import 'package:UangDana/model/my_const.dart';
@@ -7,6 +5,8 @@ import 'package:UangDana/widgets/mine/contact_item.dart';
 import 'package:UangDana/widgets/mine/menu_item.dart';
 import 'package:UangDana/widgets/mine/req_menu_item.dart';
 import 'package:UangDana/widgets/mine/topmenu_item.dart';
+import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MailDetailPage extends StatefulWidget {
@@ -233,9 +233,10 @@ class _MailDetailPageState extends State<MailDetailPage>
                                     MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
                                   new Container(
-                                    child: new Text("Jumlah(Rp)",
+                                    child: new Text("Loans(NGN)",
                                         style: new TextStyle(fontSize: 13.0)),
-                                    padding: const EdgeInsets.all(2.0),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(6, 6, 20, 6),
                                   ),
                                   new DropdownButton(
                                     value: initAmtVal,
@@ -259,9 +260,10 @@ class _MailDetailPageState extends State<MailDetailPage>
                                     MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
                                   new Container(
-                                    child: new Text("Masa Pinjaman(haris)",
+                                    child: new Text("Loan range(days)",
                                         style: new TextStyle(fontSize: 13.0)),
-                                    padding: const EdgeInsets.all(2.0),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(20, 6, 6, 6),
                                   ),
                                   new DropdownButton(
                                     value: daysVal,
@@ -297,15 +299,15 @@ class _MailDetailPageState extends State<MailDetailPage>
                       children: [
                         new DevelopingItem(
                           actualVal: initAmtVal,
-                          description: 'Pinjaman',
+                          description: 'loans',
                         ),
                         new DevelopingItem(
                           actualVal: pem.toString(),
-                          description: 'Pembayaran',
+                          description: 'payment',
                         ),
                         new DevelopingItem(
                           actualVal: bungaAdmin.toString(),
-                          description: 'Bunga+admin',
+                          description: 'interests',
                         ),
                       ],
                     ),
@@ -318,47 +320,47 @@ class _MailDetailPageState extends State<MailDetailPage>
                     children: <Widget>[
                       new ReqMenuItem(
                         iconAddr: "images/require_line.png",
-                        title: 'Tepat 18 tahun + Kartu Bank/KTP/No HP',
+                        title: 'At least 18 years old + Bank card/KTP',
                       ),
                       new TopMenuItem(
                         iconAddr: "images/process.png",
-                        title: 'Proses pinjaman',
+                        title: 'Loan Processes',
                       ),
                       new MenuItem(
                         iconAddr: "images/download.png",
-                        title: 'Download program aplikasi',
+                        title: 'Download application.',
                       ),
                       new MenuItem(
                         iconAddr: "images/write.png",
-                        title: 'isi informasi pengajuan',
+                        title: 'fill personal information.',
                       ),
                       new MenuItem(
                         iconAddr: "images/confirm_proc.png",
-                        title: 'verifikasi informasi',
+                        title: 'information verification',
                       ),
                       new MenuItem(
                         iconAddr: "images/work.png",
-                        title: 'Pinjaman masuk ke akun ada',
+                        title: 'loans go to bank card.',
                       ),
                       new TopMenuItem(
                         iconAddr: "images/process.png",
-                        title: 'syarat permohonan',
+                        title: 'Application Requirements',
                       ),
                       new MenuItem(
                         iconAddr: "images/info.png",
-                        title: 'INFORMASI IDENTITAS',
+                        title: 'Identity information',
                       ),
                       new MenuItem(
                         iconAddr: "images/bank_card.png",
-                        title: 'INFORMASI BANK',
+                        title: 'Bank information',
                       ),
                       new MenuItem(
                         iconAddr: "images/people.png",
-                        title: 'BUKTI PEKERJAAN / USAHA',
+                        title: 'Proof of work',
                       ),
                       new MenuItem(
                         iconAddr: "images/fill_confirm.png",
-                        title: 'NO HP DAN PEKERJAAN YG TETAP',
+                        title: 'permanent work information',
                       ),
                     ],
                   ),
